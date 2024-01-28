@@ -35,7 +35,7 @@ if selected == "Home":
                 -  [Github](https://www.linkedin.com/in/karthik-mutta-830413253/)
                 -  [Instagram](https://www.linkedin.com/in/karthik-mutta-830413253/)
                 """)
-            st.markdown("<div><h4>Resume</h4></div>",unsafe_allow_html=True)
+            
            
         photo.image("profile-pic.png")
 elif selected == "Experience":
