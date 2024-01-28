@@ -174,11 +174,11 @@ elif selected == "Resume":
         st.empty()
     with middle:
         with open("MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf", "rb") as file:
-        btn = st.download_button(
-            label="Download Resume",
-            data=file,
-            file_name="MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf",
-            mime="application/pdf",type="primary"
-        )
+            btn = st.download_button(
+                label="Download Resume",
+                data=file,
+                file_name="MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf",
+                mime="application/pdf",type="primary"
+            )
     with right:
         st.empty()
