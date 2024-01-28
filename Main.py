@@ -14,14 +14,14 @@ with st.sidebar:
     )
 
 if selected == "Home":
-    st.markdown("<div style='text-align:center;margin-top:5px'><h1>ABOUT ME</h1></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;margin-top:2px'><h1>ABOUT ME</h1></div>",unsafe_allow_html=True)
     with st.container():
         matter, photo = st.columns(2)
         with matter:
             st.markdown("<div style='text-align:center;margin-top:80px'></div>",unsafe_allow_html=True)
-            st.write("<div style='font-size: 18px;'>Hi, I'm MUTTA KARTHIK PATTABHI RAMA RAO. I'm currently pursuing B.Tech 4th year in the department of Computer Science and Engineering at Sri Vasavi Engineering College, pedatadepalli affiliated to JNTUK</div>", unsafe_allow_html=True)
+            st.write("<div style='font-size: 18px;text-align:center;'>Hi, I'm MUTTA KARTHIK PATTABHI RAMA RAO. I'm currently pursuing B.Tech 4th year in the department of Computer Science and Engineering at Sri Vasavi Engineering College, pedatadepalli affiliated to JNTUK</div>", unsafe_allow_html=True)
             st.text("")
-            st.write("<div style='font-size: 18px;'>▶ In addition I like to play table tennis 🏓 ,  play video games 🎮 ,  drawing 🎨 , listening to music 🎧 and...  enjoy eating good food 🍽️ in my free time!</div>", unsafe_allow_html=True)
+            st.write("<div style='font-size: 18px;text-align:center;'>▶ In addition I like to play table tennis 🏓 ,  play video games 🎮 ,  drawing 🎨 , listening to music 🎧 and...  enjoy eating good food 🍽️ in my free time!</div>", unsafe_allow_html=True)
             st.text("")
             st.markdown("<div><h4>Social Media</h4></div>",unsafe_allow_html=True)
             st.markdown("""
