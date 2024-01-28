@@ -1,14 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import base64
+
 st.set_page_config(layout="wide")
 
-def show_pdf(file_path):
-        with open(file_path,"rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="400" height="600" type="application/pdf"></iframe>'
-        st.markdown(pdf_display, unsafe_allow_html=True)
-st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
 
 with st.sidebar:
     selected = option_menu(
@@ -176,7 +170,7 @@ elif selected == "Resume":
     resume_url = "https://drive.google.com/file/d/1jDk641XVjRTc5wtMz7C7wCg75nVJKJNQ/view?usp=drive_link"
     st.markdown("<div style='text-align:center;margin-top:10px'><h1>RESUME</h1></div>",unsafe_allow_html=True)
     
-    show_pdf("MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf")
+   
     with open("MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf", "rb") as file:
         btn = st.download_button(
             label="Download Resume",
