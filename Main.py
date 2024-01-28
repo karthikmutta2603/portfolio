@@ -3,51 +3,56 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(layout="wide")
 
+st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
 
 with st.sidebar:
     selected = option_menu(
         menu_title="KARTHIK",
-        options=["Home","Experience", "Education", "Skills", "Projects"],
-        icons=["house", "clock history","book half", "tools", "clipboard"],
+        options=["Home","Experience", "Education", "Skills", "Contact"],
+        icons=["house", "clock history","book half", "tools", "envelope"],
         menu_icon="none",
         default_index=0,
     )
 
 if selected == "Home":
-    st.title("MUTTA KARTHIK PATTABHI RAMA RAO")
+    st.markdown("<div style='text-align:center;margin-top:0px'><h1>ABOUT ME</h1></div>",unsafe_allow_html=True)
     with st.container():
         matter, photo = st.columns(2)
         matter.write("<div style='font-size: 18px;'>Hi, I'm MUTTA KARTHIK PATTABHI RAMA RAO. I'm currently pursuing B.Tech 4th year in the department of Computer Science and Engineering at Sri Vasavi Engineering College, pedatadepalli affiliated to JNTUK</div>", unsafe_allow_html=True)
         matter.write("<div style='font-size: 18px;'>▶ In addition, I like to 🏓 play table tennis,🎮 play video games, 🎨 drawing,🎧 listening to music and... 🍽️ enjoy eating good food in my free time!</div>", unsafe_allow_html=True)
-        
+        matter.markdown("""
+             -  [linkedIN](https://www.linkedin.com/in/karthik-mutta-830413253/)
+            """)
         photo.image("profile-pic.png")
 elif selected == "Experience":
-    st.header("Experience")
+    st.markdown("<div style='text-align:center;margin-top:0px'><h1>EXPERIENCE</h1></div>",unsafe_allow_html=True)
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
             st.image("oasis.jpg")
         with text_column:
-            st.subheader("Web Developer,Oasis Infobyte")
+            st.subheader("Web Developer , Oasis Infobyte")
             st.write("**01-2023 to 02-2023**")
             st.markdown("""
              -  Developed landing page , portfolio , temprature converter by using 
             `HTML`,`CSS`,`JAVASCRIPT`.
             """)
+
     st.text("")
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
             st.image("sync.jpg")
         with text_column:
-            st.subheader("Web Developer,Sync Intern's")
+            st.subheader("Web Developer , Sync Intern's")
             st.write("**01-2023 to 02-2023**")
             st.markdown("""
              -   Developed login authentication , quiz website by using 
             `HTML`,`CSS`,`JAVASCRIPT`.
             """)
+
 elif selected == "Skills":
-    st.header("Skills")
+    st.markdown("<div style='text-align:center;margin-top:0px'><h1>SKILLS</h1></div>",unsafe_allow_html=True)
     
     with st.container():
         left,middle,right = st.columns(3)
@@ -114,5 +119,39 @@ elif selected == "Skills":
                 st.progress(c)
                 st.write(c,"%")
                 st.text("")
+elif selected == "Contact":
+    st.markdown("<div style='text-align:center;margin-top:0px'><h1>FEEDBACK FORM</h1></div>",unsafe_allow_html=True)
+    with st.form("Form1"):
+        col1,col2 = st.columns(2)
+        firstname = col1.text_input("First Name :")
+        lastname = col2.text_input("Last Name :")
+        email = st.text_input("Email :")
+        mobile = st.text_input("Mobile Number")
+        textarea = st.text_area("Feedback")
+        state = st.form_submit_button("Submit",type="primary")
 
+    if state:
+        if firstname == "" or lastname == "" or email == "" or mobile == "" or textarea == "":
+            st.warning("please enter all the fields")
+        else:
+            st.success("Submited Successfully")
+elif selected == "Education":
+    st.markdown("<div style='text-align:center;margin-top:0px'><h1>EDUCATION</h1></div>",unsafe_allow_html=True)
+    
+    with st.container():
+        col1, col2, col3 = st.columns(3)
 
+        with col1:
+            st.image("school1.jpg", use_column_width=True)
+            st.markdown("<div align='center'><b>Vasavi Ideal Public School</b> <br> <b>High School</b> <br> <b>Percentage - 77.2%</b> </div>", unsafe_allow_html=True)
+            st.text("")
+
+        with col2:
+            st.image("inter.jpg", use_column_width=True)
+            st.markdown("<div align='center'><b>Tirumala Junior College</b> <br> <b>Intermediate</b> <br> <b>Percentage - 93.7%</b> </div>", unsafe_allow_html=True)
+            st.text("")
+
+        with col3:
+            st.image("college.jpg", use_column_width=True)
+            st.markdown("<div align='center'><b>Sri Vasavi Engineering College</b>  <br> <b> Bachelor of Technology</b> <br> <b>Computer Science and Engineering</b> <br> <b>Percentage - 79.34%</b></div>", unsafe_allow_html=True)
+            st.text("")
