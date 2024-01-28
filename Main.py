@@ -14,7 +14,7 @@ with st.sidebar:
     )
 
 if selected == "Home":
-    st.markdown("<div style='text-align:center;margin-top:2px'><h1>ABOUT ME</h1></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;'><h1>ABOUT ME</h1></div>",unsafe_allow_html=True)
     with st.container():
         matter, photo = st.columns(2)
         with matter:
@@ -33,10 +33,10 @@ if selected == "Home":
            
         photo.image("profile-pic.png")
 elif selected == "Experience":
-    st.markdown("<div style='text-align:center;margin-top:5px'><h1>EXPERIENCE</h1></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;'><h1>EXPERIENCE</h1></div>",unsafe_allow_html=True)
     left,right = st.columns(2)
     with left:
-        st.markdown("<div style='text-align:center;margin-top:10px'></div>",unsafe_allow_html=True)
+        st.markdown("<div style='text-align:center;margin-top:10px;'></div>",unsafe_allow_html=True)
         image_column, text_column = st.columns((1,5))
         with image_column:
             st.image("oasis.jpg")
@@ -48,7 +48,7 @@ elif selected == "Experience":
             `HTML`,`CSS`,`JAVASCRIPT`.
             """)
     with right:
-        st.markdown("<div style='text-align:center;margin-top:10px'></div>",unsafe_allow_html=True)
+        st.markdown("<div style='text-align:center;margin-top:10px;'></div>",unsafe_allow_html=True)
         image_column, text_column = st.columns((1,5))
         with image_column:
             st.image("sync.jpg")
@@ -61,7 +61,7 @@ elif selected == "Experience":
             """)
 
 elif selected == "Skills":
-    st.markdown("<div style='text-align:center;margin-top:5px'><h1>SKILLS</h1></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;'><h1>SKILLS</h1></div>",unsafe_allow_html=True)
     
     with st.container():
         left,middle,right = st.columns(3)
@@ -129,7 +129,7 @@ elif selected == "Skills":
                 st.write(c,"%")
                 st.text("")
 elif selected == "Contact":
-    st.markdown("<div style='text-align:center;margin-top:5px'><h1>FEEDBACK FORM</h1></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;'><h1>FEEDBACK FORM</h1></div>",unsafe_allow_html=True)
     with st.form("Form1"):
         col1,col2 = st.columns(2)
         firstname = col1.text_input("First Name :")
@@ -168,13 +168,18 @@ elif selected == "Education":
             st.text("")
 elif selected == "Resume":   
     resume_url = "https://drive.google.com/file/d/1jDk641XVjRTc5wtMz7C7wCg75nVJKJNQ/view?usp=drive_link"
-    st.markdown("<div style='text-align:center;margin-top:5px'><h1>RESUME</h1></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;'><h1>RESUME</h1></div>",unsafe_allow_html=True)
     
-   
-    with open("MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf", "rb") as file:
+   last,middle,right = st.columns(3)
+   with last:
+       st.empty()
+    with middle:
+        with open("MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf", "rb") as file:
         btn = st.download_button(
             label="Download Resume",
             data=file,
             file_name="MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf",
             mime="application/pdf",type="primary"
         )
+    with right:
+        st.empty()
