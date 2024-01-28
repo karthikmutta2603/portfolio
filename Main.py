@@ -169,10 +169,9 @@ elif selected == "Education":
 elif selected == "Resume":   
     resume_url = "https://drive.google.com/file/d/1jDk641XVjRTc5wtMz7C7wCg75nVJKJNQ/view?usp=drive_link"
     st.markdown("<div style='text-align:center;'><h1>RESUME</h1></div>",unsafe_allow_html=True)
-    
-   last,middle,right = st.columns(3)
-   with last:
-       st.empty()
+    last,middle,right = st.columns(3)
+    with last:
+        st.empty()
     with middle:
         with open("MUTTA-KARTHIK-PATTABHI-RAMA-RAO-RESUME.pdf", "rb") as file:
         btn = st.download_button(
