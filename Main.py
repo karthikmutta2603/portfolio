@@ -36,9 +36,7 @@ if selected == "Home":
                 -  [Instagram](https://www.linkedin.com/in/karthik-mutta-830413253/)
                 """)
             st.markdown("<div><h4>Resume</h4></div>",unsafe_allow_html=True)
-            st.markdown("""
-                -  [Resume](https://drive.google.com/file/d/1jDk641XVjRTc5wtMz7C7wCg75nVJKJNQ/view?usp=drive_link)
-                """)
+           
         photo.image("profile-pic.png")
 elif selected == "Experience":
     st.markdown("<div style='text-align:center;margin-top:10px'><h1>EXPERIENCE</h1></div>",unsafe_allow_html=True)
