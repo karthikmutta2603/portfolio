@@ -42,7 +42,9 @@ if selected == "Home":
         photo.image("profile-pic.png")
 elif selected == "Experience":
     st.markdown("<div style='text-align:center;margin-top:10px'><h1>EXPERIENCE</h1></div>",unsafe_allow_html=True)
-    with st.container():
+    left,right = st.columns(2)
+    with left:
+        st.markdown("<div style='text-align:center;margin-top:50px'></div>",unsafe_allow_html=True)
         image_column, text_column = st.columns((1,5))
         with image_column:
             st.image("oasis.jpg")
@@ -53,9 +55,8 @@ elif selected == "Experience":
              -  Developed landing page , portfolio , temprature converter by using 
             `HTML`,`CSS`,`JAVASCRIPT`.
             """)
-
-    st.text("")
-    with st.container():
+    with right:
+        st.markdown("<div style='text-align:center;margin-top:50px'></div>",unsafe_allow_html=True)
         image_column, text_column = st.columns((1,5))
         with image_column:
             st.image("sync.jpg")
@@ -146,6 +147,8 @@ elif selected == "Contact":
         textarea = st.text_area("Feedback")
         state = st.form_submit_button("Submit",type="primary")
 
+    st.markdown("<div style='text-align:center;margin-top:10px'><h4>MAIL-ID : </h4><h6>karthikmutta26@gmail.com</h6></div>",unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center;margin-top:10px'><h4>MOBILE MUMBER : </h4><h6>+91 7981613722</h6></div>",unsafe_allow_html=True)
     if state:
         if firstname == "" or lastname == "" or email == "" or mobile == "" or textarea == "":
             st.warning("please enter all the fields")
