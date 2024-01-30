@@ -26,8 +26,8 @@ if selected == "Home":
             st.markdown("<div><h4>Social Media</h4></div>",unsafe_allow_html=True)
             st.markdown("""
                 -  [linkedIN](https://www.linkedin.com/in/karthik-mutta-830413253/)
-                -  [Github](https://www.linkedin.com/in/karthik-mutta-830413253/)
-                -  [Instagram](https://www.linkedin.com/in/karthik-mutta-830413253/)
+                -  [Github](https://github.com/karthikmutta26)
+                -  [Instagram](https://www.instagram.com/karthikmutta/)
                 """)
             
            
